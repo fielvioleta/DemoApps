@@ -20,5 +20,5 @@ Auth::routes();
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', 'admin\DashBoardController@index')->name('dashboard');
     
-    Route::get('/products', 'admin\ProductController@index')->name('admin.products');
+    Route::resource('products', 'admin\ProductController');
 });

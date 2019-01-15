@@ -54,8 +54,4 @@
     .user-area .user-menu {
         right: 0 !important;
     }
-
-    #bootstrap-data-table {
-        height: 720px;
-    }
 </style>

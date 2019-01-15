@@ -7,8 +7,8 @@
                     <a href="{{ route('dashboard') }}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                 </li>
 
-                <li class="{{ Route::is('admin.products') ? 'active' : '' }}">
-                    <a href="{{ route('admin.products') }}"><i class="menu-icon fa fa-product-hunt"></i>Products</a>
+                <li class="{{ Route::is('products.index') ? 'active' : '' }}">
+                    <a href="{{ route('products.index') }}"><i class="menu-icon fa fa-product-hunt"></i>Products</a>
                 </li>
                 
             </ul>
