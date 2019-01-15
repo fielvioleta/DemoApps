@@ -11,10 +11,14 @@
 |
 */
 
-Auth::routes();
-
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
 
+Auth::routes();
+
+
+// admin routes
 Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+    Route::get('/dashboard', 'admin\DashBoardController@index')->name('dashboard');
+    
+    Route::get('/products', 'admin\ProductController@index')->name('admin.products');
 });
