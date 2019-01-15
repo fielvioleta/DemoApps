@@ -17,7 +17,24 @@
                 </div>
 
                 <div class="row"> 
-                    
+                        
+                    <div class="card-body card-block">
+                        <form method="post" action="{{ route('products.store') }}">
+                            @csrf   
+                            
+                            <div class="form-group">
+                                <label for="name" class=" form-control-label">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter Product Name" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description" class=" form-control-label">Description</label>
+                                <input type="text" name="description" id="description" placeholder="Enter Description" class="form-control">
+                            </div>
+
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>

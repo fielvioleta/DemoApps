@@ -1,4 +1,4 @@
-<div class="clearfix"></div>
+<div class="clearfix" style="min-height: 85vh"></div>
 
 <footer class="site-footer">
     <div class="footer-inner bg-white">
