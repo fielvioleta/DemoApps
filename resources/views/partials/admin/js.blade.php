@@ -18,10 +18,24 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-<!--Local Stuff-->
+
+{{-- DataTables --}}
+<script src="{{ asset('js/lib/data-table/datatables.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/buttons.bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/jszip.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/vfs_fonts.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/buttons.print.min.js') }}"></script>
+<script src="{{ asset('js/lib/data-table/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('js/init/datatables-init.js') }}"></script>
+
 <script>
     jQuery(document).ready(function($) {
         "use strict";
+        
+        $('#bootstrap-data-table').DataTable();
 
         // Pie chart flotPie1
         var piedata = [

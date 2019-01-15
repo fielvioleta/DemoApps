@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/cs-skin-elastic.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/lib/datatable/dataTables.bootstrap.min.css') }}">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -12,6 +13,7 @@
 <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 <style>
     #weatherWidget .currentDesc {
@@ -47,7 +49,13 @@
     #cellPaiChart{
         height: 160px;
     }
+
+    /* added */
     .user-area .user-menu {
         right: 0 !important;
+    }
+
+    #bootstrap-data-table {
+        height: 720px;
     }
 </style>
