@@ -8,6 +8,14 @@
                 </li>
 
                 <li class="{{ 
+                    Route::is('categories.index') ||
+                    Route::is('categories.create') ||
+                    Route::is('categories.edit') 
+                    ? 'active' : '' }}">
+                    <a href="{{ route('categories.index') }}"><i class="menu-icon fa fa-list-alt"></i>Categories</a>
+                </li>
+
+                <li class="{{ 
                     Route::is('products.index') ||
                     Route::is('products.create') ||
                     Route::is('products.edit') 
