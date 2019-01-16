@@ -25,12 +25,12 @@
                              
                                 <div class="form-group">
                                     <label for="name" class=" form-control-label">Name</label>
-                                    <input type="text" name="name" id="name" placeholder="Enter Category Name" class="form-control">
+                                    <input value="{{old('name')}}" type="text" name="name" id="name" placeholder="Enter Category Name" class="form-control">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="description" class=" form-control-label">Description</label>
-                                    <textarea class="form-control" style="resize:none"rows="4" name="description" id="description" placeholder="Enter Description"></textarea>
+                                    <textarea value="{{old('description')}}" class="form-control" style="resize:none"rows="4" name="description" id="description" placeholder="Enter Description"></textarea>
                                 </div>
 
                         </div>

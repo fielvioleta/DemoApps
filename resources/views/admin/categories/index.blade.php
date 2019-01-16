@@ -25,7 +25,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Name</th>
-                                    <th>Category</th>
+                                    <th>Description</th>
                                     <th></th>
                                 </tr>
                             </thead>
