@@ -27,8 +27,8 @@ class ProductStoreRequest extends FormRequest
             'name' => 'required|max:50',
             'description' => 'required|max:255',
             'price' => 'required|numeric',
-            'category_id' => 'required',
-            'image_path' => 'image',
+            'category_id' => 'not_in:0',
+            'image_path' => 'image|nullable',
         ];
     }
 
@@ -45,8 +45,8 @@ class ProductStoreRequest extends FormRequest
             'description.required' => 'Description is required.',
             'description.max' => 'Description is too long.',
             'price.required' => 'Price is required.',
-            'price.numeric' => 'Price must be numberic.',
-            'category_id.required' => 'Category is required.',
+            'price.numeric' => 'Price must be numeric.',
+            'category_id.not_in' => 'Category is required.',
             'image_path.image' => 'Only image is allowed.',
         ];
     }

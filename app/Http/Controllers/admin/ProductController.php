@@ -54,8 +54,26 @@ class ProductController extends Controller
     public function store(ProductStoreRequest $request)
     {
         //
+        $product = new Product();
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->price = $request->price;
+        $product->image_path = '';
 
-        dd($request);
+        if($product->save()) {
+            if($request->hasFile('image_path')) {
+                $extension = $request->file('image_path')->getClientOriginalExtension();
+
+                $filename = $product->id . '.' . $extension;
+
+                $path = $request->file('image_path')->storeAs('public/products', $filename);
+                $product->image_path = $filename;
+                $product->save();
+            }
+        }
+
+        return redirect()->route('products.index')->with('success', 'Product has been added');
     }
 
     /**
