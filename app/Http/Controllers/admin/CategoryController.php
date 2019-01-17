@@ -85,7 +85,7 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryStoreRequest $request, $id)
     {
         //
         $category = Category::find($id);
@@ -93,7 +93,7 @@ class CategoryController extends Controller
         $category->description = $request->get('description');
         $category->save();
 
-        return redirect()->route('categories.index')->with('success', 'category has been updated');
+        return redirect()->route('categories.index')->with('success', 'Category has been updated');
     }
 
     /**

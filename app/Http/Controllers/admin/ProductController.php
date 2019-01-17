@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductStoreRequest;
 use App\Category;
@@ -98,6 +99,10 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        $product = Product::find($id);
+        $categories = Category::all('id' , 'name');
+
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     /**
@@ -107,9 +112,30 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductStoreRequest $request, $id)
     {
         //
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->price = $request->price;
+        $product->image_path = $product->image_path;
+
+        
+        if($product->save()) {
+            if($request->hasFile('image_path')) {
+                $extension = $request->file('image_path')->getClientOriginalExtension();
+
+                $filename = $product->id . '.' . $extension;
+
+                $path = $request->file('image_path')->storeAs('products', $filename);
+                $product->image_path = $filename;
+                $product->save();
+            }
+        }
+
+        return redirect()->route('products.index')->with('success', 'Product has been updated');
     }
 
     /**
@@ -122,7 +148,11 @@ class ProductController extends Controller
     {
         //
         $product = Product::find($id);
+        
+        Storage::delete('products/'.$product->image_path);
+
         $product->delete();
+
 
         return redirect()->route('products.index')->with('success', 'Product has been deleted');
     }
