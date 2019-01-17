@@ -54,4 +54,8 @@
     .user-area .user-menu {
         right: 0 !important;
     }
+    #bootstrap-data-table a:hover {
+        color: transparent;
+        text-decoration: none;
+    }
 </style>

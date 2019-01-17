@@ -29,7 +29,9 @@ class ProductController extends Controller
     public function index()
     {
         //
-        return view('admin.products.index');
+        $products = Product::all();
+
+        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -67,7 +69,7 @@ class ProductController extends Controller
 
                 $filename = $product->id . '.' . $extension;
 
-                $path = $request->file('image_path')->storeAs('public/products', $filename);
+                $path = $request->file('image_path')->storeAs('products', $filename);
                 $product->image_path = $filename;
                 $product->save();
             }
@@ -119,5 +121,9 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect()->route('products.index')->with('success', 'Product has been deleted');
     }
 }

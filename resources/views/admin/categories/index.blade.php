@@ -37,7 +37,11 @@
                                         <td>{{$category->description}}</td>
                                         <td class="w-25">
 
-                                                <a href="{{ route('categories.edit', $category->id)}}" class="btn btn-primary d-inline">Edit</a>
+                                                <a href="{{ route('categories.edit', $category->id)}}">
+                                                    <button class="btn btn-primary d-inline">
+                                                        Edit
+                                                    </button>
+                                                </a>
                                                 <form class="d-inline" action="{{ route('categories.destroy', $category->id)}}" method="post">
                                                     @csrf
                                                     @method('DELETE')
