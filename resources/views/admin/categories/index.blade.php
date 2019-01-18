@@ -24,6 +24,7 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
+                                    <th>Image</th>
                                     <th>Name</th>
                                     <th></th>
                                 </tr>
@@ -32,6 +33,11 @@
                                 @foreach($categories as $category)
                                     <tr>
                                         <td>{{$category->id}}</td>
+                                        <td>
+                                            @if( $category->image_path && file_exists(public_path('/storage/categories/'.$category->image_path)) )
+                                                <img src="/storage/categories/{{$category->image_path}}" width=100>
+                                            @endif
+                                        </td>
                                         <td>{{$category->name}}</td>
                                         <td class="w-25">
 

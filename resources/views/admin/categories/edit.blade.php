@@ -18,7 +18,7 @@
 
                 @include('partials.messages.error')
 
-                <form method="post" action="{{ route('categories.update', $category->id) }}">
+                <form method="post" action="{{ route('categories.update', $category->id) }}" enctype="multipart/form-data">
                 @csrf  
                 @method('PUT')
                     <div class="row"> 
@@ -34,6 +34,11 @@
                                     <textarea class="form-control" name="description" id="editor">{{$category->description}}</textarea>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="image_path" class=" form-control-label">File input</label>
+                                    <input type="file" id="image_path" name="image_path" class="form-control-file" accept="image/x-png,image/gif,image/jpeg">
+                                </div>
+                                
                         </div>
                     </div>
 

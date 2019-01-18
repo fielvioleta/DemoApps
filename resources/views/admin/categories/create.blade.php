@@ -18,7 +18,7 @@
 
                 @include('partials.messages.error')
 
-                <form method="post" action="{{ route('categories.store') }}">
+                <form method="post" action="{{ route('categories.store') }}" enctype="multipart/form-data">
                 @csrf  
                     <div class="row"> 
                         <div class="card-body card-block">
@@ -33,6 +33,11 @@
                                     <textarea class="form-control" name="description" id="editor">{{old('description')}}</textarea>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="image_path" class=" form-control-label">File input</label>
+                                    <input type="file" id="image_path" name="image_path" class="form-control-file" accept="image/x-png,image/gif,image/jpeg">
+                                </div>
+                                
                         </div>
                     </div>
 

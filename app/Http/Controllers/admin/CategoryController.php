@@ -57,8 +57,19 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->description = $request->description;
-        
-        $category->save();
+        $category->image_path = '';
+
+        if($category->save()) {
+            if($request->hasFile('image_path')) {
+                $extension = $request->file('image_path')->getClientOriginalExtension();
+
+                $filename = $category->id . '.' . $extension;
+
+                $path = $request->file('image_path')->storeAs('categories', $filename);
+                $category->image_path = $filename;
+                $category->save();
+            }
+        }
 
         return redirect()->route('categories.index')->with('success', 'Category has been added');
     }
@@ -101,7 +112,19 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->name = $request->get('name');
         $category->description = $request->get('description');
-        $category->save();
+        $category->image_path = $category->image_path;
+
+        if($category->save()) {
+            if($request->hasFile('image_path')) {
+                $extension = $request->file('image_path')->getClientOriginalExtension();
+
+                $filename = $category->id . '.' . $extension;
+
+                $path = $request->file('image_path')->storeAs('products', $filename);
+                $category->image_path = $filename;
+                $category->save();
+            }
+        }
 
         return redirect()->route('categories.index')->with('success', 'Category has been updated');
     }
