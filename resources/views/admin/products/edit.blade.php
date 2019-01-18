@@ -31,7 +31,7 @@
 
                                 <div class="form-group">
                                     <label for="description" class=" form-control-label">Description</label>
-                                    <textarea class="form-control" style="resize:none"rows="4" name="description" id="description" placeholder="Enter Description">{{$product->description}}</textarea>
+                                    <textarea class="form-control" name="description" id="editor">{{$product->description}}</textarea>
                                 </div>
 
                                 <div class="form-group">

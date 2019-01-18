@@ -25,7 +25,6 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Name</th>
-                                    <th>Description</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -34,7 +33,6 @@
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td>{{$category->description}}</td>
                                         <td class="w-25">
 
                                                 <a href="{{ route('categories.edit', $category->id)}}">
