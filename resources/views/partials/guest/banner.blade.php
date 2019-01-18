@@ -6,7 +6,7 @@
                 <div class="col-md-4">
 					<div class="banner_item align-items-center" style="background-image:url({{ asset('/storage/categories/'.$category->image_path) }})">
 						<div class="banner_category">
-							<a href="categories.html">{{$category->name}}</a>
+							<a href="{{ route('categories', [ 'id' => $category->id ])}}">{{$category->name}}</a>
 						</div>
 					</div>
 				</div>

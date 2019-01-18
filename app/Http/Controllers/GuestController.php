@@ -23,11 +23,22 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index() {
         $categories = Category::all('id', 'name', 'image_path');
         $products = Product::all();
 
         return view('guest.index', compact('categories', 'products'));
+    }
+
+    /**
+     * Display the categories
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function categories(Request $request) {
+        $category_id = $request->id;
+
+
+        return view('guest.categories');
     }
 }
