@@ -13,11 +13,9 @@
 
 Route::get('/', 'GuestController@index')->name('login');
 
-Auth::routes();
-
-
 // admin routes
 Route::prefix('admin')->group(function () {
+	Auth::routes();
     Route::get('/dashboard', 'admin\DashBoardController@index')->name('dashboard');
     Route::resource('products', 'admin\ProductController');
     Route::resource('categories', 'admin\CategoryController');
