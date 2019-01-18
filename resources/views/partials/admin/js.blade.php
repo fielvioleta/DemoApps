@@ -18,6 +18,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 
 {{-- DataTables --}}
 <script src="{{ asset('admin/js/lib/data-table/datatables.min.js') }}"></script>
@@ -36,6 +37,11 @@
         "use strict";
         
         $('#bootstrap-data-table').DataTable();
+
+        ClassicEditor.create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        });
 
         // Pie chart flotPie1
         var piedata = [

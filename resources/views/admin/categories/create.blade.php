@@ -30,7 +30,7 @@
 
                                 <div class="form-group">
                                     <label for="description" class=" form-control-label">Description</label>
-                                    <textarea value="{{old('description')}}" class="form-control" style="resize:none"rows="4" name="description" id="description" placeholder="Enter Description"></textarea>
+                                    <textarea class="form-control" rows="4" name="description" id="editor">{{old('description')}}</textarea>
                                 </div>
 
                         </div>
