@@ -22,11 +22,9 @@
 	</header>
 
 	@include('partials.guest.hamburger')
-	@include('partials.guest.slider')
-	@include('partials.guest.banner')
-	@include('partials.guest.newarrival')
-	@include('partials.guest.dealofweek')
-	@include('partials.guest.bestseller')
+	
+	@yield('content')
+
 	@include('partials.guest.benefit')
 	@include('partials.guest.blogs')
 	@include('partials.guest.newsletter')
