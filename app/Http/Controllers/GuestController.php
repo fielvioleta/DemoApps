@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Product;
 
 class GuestController extends Controller
 {
@@ -23,6 +25,9 @@ class GuestController extends Controller
      */
 
     public function index() {
-        return view('guest.index');
+        $categories = Category::all('id', 'name', 'image_path');
+        $products = Product::all();
+
+        return view('guest.index', compact('categories', 'products'));
     }
 }

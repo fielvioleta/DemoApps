@@ -1,27 +1,17 @@
 <div class="banner">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-				<div class="banner_item align-items-center" style="background-image:url({{ asset('guest/images/banner_1.jpg') }})">
-					<div class="banner_category">
-						<a href="categories.html">women's</a>
+			
+			@foreach($categories as $category)
+                <div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url({{ asset('/storage/categories/'.$category->image_path) }})">
+						<div class="banner_category">
+							<a href="categories.html">{{$category->name}}</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="banner_item align-items-center" style="background-image:url({{ asset('guest/images/banner_2.jpg') }})">
-					<div class="banner_category">
-						<a href="categories.html">accessories's</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="banner_item align-items-center" style="background-image:url({{ asset('guest/images/banner_3.jpg') }})">
-					<div class="banner_category">
-						<a href="categories.html">men's</a>
-					</div>
-				</div>
-			</div>
+            @endforeach
+			
 		</div>
 	</div>
 </div>
