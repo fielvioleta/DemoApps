@@ -15,7 +15,8 @@ class GuestController extends Controller
      */
     public function __construct()
     {
-        
+        $this->categories = Category::all('id', 'name', 'image_path');
+        $this->products = Product::all();
     }
 
     /**
@@ -24,10 +25,10 @@ class GuestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $categories = Category::all('id', 'name', 'image_path');
-        $products = Product::all();
-
-        return view('guest.index', compact('categories', 'products'));
+        return view('guest.index', [
+            'categories' => $this->categories,
+            'products' => $this->products,
+        ]);
     }
 
     /**
@@ -38,7 +39,9 @@ class GuestController extends Controller
     public function categories(Request $request) {
         $category_id = $request->id;
 
-
-        return view('guest.categories');
+        return view('guest.categories', [
+            'categories' => $this->categories,
+            'products' => $this->products,
+        ]);
     }
 }
