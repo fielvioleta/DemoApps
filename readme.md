@@ -22,6 +22,16 @@ php artisan migrate
 php artisan key:generate 
 ```
 
+## Setting storage file
+- Open .env file and add the following
+```
+FILESYSTEM_DRIVER=public
+```
+- Execute the following command
+```
+php artisan storage:link
+```
+
 ## Running the server
 - Run the server.
 ```
