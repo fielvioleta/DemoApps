@@ -53,7 +53,6 @@ class CategoryController extends Controller
     {
         //
         $request->validated();
-
         $category = new Category();
         $category->name = $request->name;
         $category->description = $request->description;
@@ -96,7 +95,11 @@ class CategoryController extends Controller
         //
         $category = Category::find($id);
 
-        return view('admin.categories.edit', compact('category'));
+        $images = [];
+        array_push($images, '/storage/categories/' . $category->image_path);
+        $categoryImage = $images;
+
+        return view('admin.categories.edit', compact('category', 'categoryImage'));
     }
 
     /**
@@ -120,7 +123,7 @@ class CategoryController extends Controller
 
                 $filename = $category->id . '.' . $extension;
 
-                $path = $request->file('image_path')->storeAs('products', $filename);
+                $path = $request->file('image_path')->storeAs('categories', $filename);
                 $category->image_path = $filename;
                 $category->save();
             }

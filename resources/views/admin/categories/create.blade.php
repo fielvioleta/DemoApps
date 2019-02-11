@@ -33,11 +33,17 @@
                                     <textarea class="form-control" name="description" id="editor">{{old('description')}}</textarea>
                                 </div>
 
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="image_path" class=" form-control-label">File input</label>
                                     <input type="file" id="image_path" name="image_path" class="form-control-file" accept="image/x-png,image/gif,image/jpeg">
+                                </div> --}}
+
+                                <div class="form-group">
+                                    <label for="image_path" class=" form-control-label">Image</label>
+                                    <div class="file-loading">
+                                        <input type="file" id="image_path" name="image_path" class="form-control-file" accept="image/x-png,image/gif,image/jpeg">
+                                    </div>
                                 </div>
-                                
                         </div>
                     </div>
 

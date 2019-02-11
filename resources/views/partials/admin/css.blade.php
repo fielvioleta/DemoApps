@@ -2,6 +2,13 @@
 <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('admin/css/lib/datatable/dataTables.bootstrap.min.css') }}">
 
+{{-- fileinput --}}
+<link rel="stylesheet" href="{{ asset('admin/fileinput/css/fileinput.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ asset('admin/fileinput/themes/explorer-fas/theme.css') }}">
+
+
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">

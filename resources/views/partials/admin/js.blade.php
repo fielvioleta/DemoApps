@@ -32,6 +32,16 @@
 <script src="{{ asset('admin/js/lib/data-table/buttons.colVis.min.js') }}"></script>
 <script src="{{ asset('admin/js/init/datatables-init.js') }}"></script>
 
+
+
+<script src="{{ asset('admin/fileinput/js/plugins/sortable.js') }}"></script>
+<script src="{{ asset('admin/fileinput/js/fileinput.js') }}"></script>
+<script src="{{ asset('admin/fileinput/js/locales/fr.js') }}"></script>
+<script src="{{ asset('admin/fileinput/js/locales/es.js') }}"></script>
+<script src="{{ asset('admin/fileinput/themes/fas/theme.js') }}"></script>
+<script src="{{ asset('admin/fileinput/themes/explorer-fas/theme.js') }}"></script>
+
+
 <script>
     jQuery(document).ready(function($) {
         "use strict";
@@ -50,63 +60,63 @@
             { label: "Mobile visits", data: [[1,35]], color: '#66bb6a'}
         ];
 
-        $.plot('#flotPie1', piedata, {
-            series: {
-                pie: {
-                    show: true,
-                    radius: 1,
-                    innerRadius: 0.65,
-                    label: {
-                        show: true,
-                        radius: 2/3,
-                        threshold: 1
-                    },
-                    stroke: {
-                        width: 0
-                    }
-                }
-            },
-            grid: {
-                hoverable: true,
-                clickable: true
-            }
-        });
+        // $.plot('#flotPie1', piedata, {
+        //     series: {
+        //         pie: {
+        //             show: true,
+        //             radius: 1,
+        //             innerRadius: 0.65,
+        //             label: {
+        //                 show: true,
+        //                 radius: 2/3,
+        //                 threshold: 1
+        //             },
+        //             stroke: {
+        //                 width: 0
+        //             }
+        //         }
+        //     },
+        //     grid: {
+        //         hoverable: true,
+        //         clickable: true
+        //     }
+        // });
         // Pie chart flotPie1  End
 
         // Line Chart  #flotLine5
         var newCust = [[0, 3], [1, 5], [2,4], [3, 7], [4, 9], [5, 3], [6, 6], [7, 4], [8, 10]];
 
-        var plot = $.plot($('#flotLine5'),[{
-            data: newCust,
-            label: 'New Data Flow',
-            color: '#fff'
-        }],
-        {
-            series: {
-                lines: {
-                    show: true,
-                    lineColor: '#fff',
-                    lineWidth: 2
-                },
-                points: {
-                    show: true,
-                    fill: true,
-                    fillColor: "#ffffff",
-                    symbol: "circle",
-                    radius: 3
-                },
-                shadowSize: 0
-            },
-            points: {
-                show: true,
-            },
-            legend: {
-                show: false
-            },
-            grid: {
-                show: false
-            }
-        });
+        // var plot = $.plot($('#flotLine5'),[{
+        //     data: newCust,
+        //     label: 'New Data Flow',
+        //     color: '#fff'
+        // }],
+        // {
+        //     series: {
+        //         lines: {
+        //             show: true,
+        //             lineColor: '#fff',
+        //             lineWidth: 2
+        //         },
+        //         points: {
+        //             show: true,
+        //             fill: true,
+        //             fillColor: "#ffffff",
+        //             symbol: "circle",
+        //             radius: 3
+        //         },
+        //         shadowSize: 0
+        //     },
+        //     points: {
+        //         show: true,
+        //     },
+        //     legend: {
+        //         show: false
+        //     },
+        //     grid: {
+        //         show: false
+        //     }
+        // });
         // Line Chart  #flotLine5 End
         // Traffic Chart using chartist
         if ($('#traffic-chart').length) {
@@ -192,5 +202,31 @@
             } );
         }
         //Traffic chart chart-js  End
+        @isset($categoryImage)
+            var imagePrev = JSON.parse('{!! json_encode($categoryImage) !!}');
+        @endisset
+
+        $("#image_path").fileinput({
+            theme: 'fas',
+            showUpload: false,
+            showCaption: false,
+            showCancel: false,
+            browseClass: "btn btn-primary btn-md",
+            fileType: "any",
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            allowedFileTypes: ['image'],
+            allowedFileExtensions: ['jpg', 'gif', 'png'],
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            layoutTemplates: {footer: ''},
+            initialPreview: [
+                @isset($categoryImage)
+                    imagePrev
+                @endisset
+                // "http://lorempixel.com/1920/1080/transport/1",
+                // "http://lorempixel.com/1920/1080/transport/2",
+                // "http://lorempixel.com/1920/1080/transport/3"
+            ]
+        });
     });
 </script>
