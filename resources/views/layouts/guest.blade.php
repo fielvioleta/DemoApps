@@ -19,7 +19,11 @@
 	<!--nav-->
 
 	<!--slider main-->
-	@include('partials.guest.slider')
+	
+		@if ( $route_name == 'index' )
+			@include('partials.guest.slider')
+		@endif
+
 	<!--slider main-->
 	
 	<!-- major categories -->

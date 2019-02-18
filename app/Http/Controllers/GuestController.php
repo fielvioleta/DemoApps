@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+
 use App\Category;
 use App\Product;
 
@@ -17,6 +19,7 @@ class GuestController extends Controller
     {
         $this->categories = Category::all('id', 'name', 'image_path');
         $this->products = Product::all();
+        $this->route_name = Route::currentRouteName();
     }
 
     /**
@@ -28,6 +31,7 @@ class GuestController extends Controller
         return view('guest.index', [
             'categories' => $this->categories,
             'products' => $this->products,
+            'route_name' => $this->route_name,
         ]);
     }
 

@@ -68,6 +68,6 @@
 	</div>
 
 	<div class="spacer text-center">
-		<a class="btn btn-primary btn-lg" href="category.html" role="button">See More</a>
+		<a class="btn btn-primary btn-lg" href="{{route('categories')}}" role="button">See More</a>
 	</div>
 </div>

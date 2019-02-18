@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'GuestController@index')->name('login');
+Route::get('/', 'GuestController@index')->name('index');
 Route::get('/categories', 'GuestController@categories')->name('categories');
 
 // admin routes
