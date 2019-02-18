@@ -1,38 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>DemoApps By Fiel</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Colo Shop Template">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-@include('partials.guest.css') 
-@include('partials.guest.js') 
+    @include('partials.guest.css')
+    @include('partials.guest.js')
+    
+    <title>Laravel DemoApps</title>
+  </head>
+  <body>
+	<!--nav-->
+	<div class="bg-light navbar-light sticky-top">
+	<div class="container">
+		@include('partials.guest.main-nav')
+	</div>
+	</div>
+	<!--nav-->
 
-</head>
-
-<body>
-
-<div class="super_container">
-
-	<header class="header trans_300">
-		@include('partials.guest.topnav')
-		@include('partials.guest.mainnav')
-	</header>
-
-	@include('partials.guest.hamburger')
+	<!--slider main-->
+	@include('partials.guest.slider')
+	<!--slider main-->
 	
-	@yield('content')
+	<!-- major categories -->
+	@include('partials.guest.sub-nav')
+	<!-- end major cat-->
 
-	@include('partials.guest.benefit')
-	@include('partials.guest.blogs')
-	@include('partials.guest.newsletter')
+	<!--featured products-->
+	@include('partials.guest.featured-product')
+	<!--featured products-->
+
+	{{-- footer --}}
 	@include('partials.guest.footer')
 
-</div>
-	
-	
-</body>
-
+  </body>
 </html>
