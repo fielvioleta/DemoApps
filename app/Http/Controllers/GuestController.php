@@ -46,6 +46,7 @@ class GuestController extends Controller
         return view('guest.categories', [
             'categories' => $this->categories,
             'products' => $this->products,
+            'route_name' => $this->route_name,
         ]);
     }
 }

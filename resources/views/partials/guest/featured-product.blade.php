@@ -14,7 +14,7 @@
 			<div class="card-deck">
 			  	@foreach( $products as $product )
 					<div class="card text-center">
-						<img class="card-img-top" src="{{ asset('main/art-artistic-business-335257.jpg') }}" alt="Card image cap">
+						<img class="card-img-top" src="/storage/categories/{{$product->image_path}}" alt="Card image cap">
 						<div class="card-body">
 						  <h5 class="card-title">{{ $product->name }}</h5>
 						  <p class="card-text">{{ $product->category->name }}</p>
@@ -39,7 +39,7 @@
 			  
 			  @foreach( $products as $product )
 				  <div class="card text-center">
-				    <img class="card-img-top" src="{{ asset('main/art-artistic-business-335257.jpg') }}" alt="Card image cap">
+				    <img class="card-img-top" src="/storage/categories/{{$product->image_path}}" alt="Card image cap">
 				    <div class="card-body">
 				      <h5 class="card-title">{{$product->name}}</h5>
 				      <p class="card-text">{{$product->category->name}}</p>

@@ -20,9 +20,10 @@
 
 	<!--slider main-->
 	
-		@if ( $route_name == 'index' )
-			@include('partials.guest.slider')
-		@endif
+	@if ( $route_name == 'index' )
+		@include('partials.guest.slider')
+	@endif
+
 
 	<!--slider main-->
 	
@@ -30,8 +31,12 @@
 	@include('partials.guest.sub-nav')
 	<!-- end major cat-->
 
+	@yield('content')
+
 	<!--featured products-->
-	@include('partials.guest.featured-product')
+	@if ( $route_name == 'index' )
+		@include('partials.guest.featured-product')
+	@endif
 	<!--featured products-->
 
 	{{-- footer --}}
