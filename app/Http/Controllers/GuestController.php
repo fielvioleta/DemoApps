@@ -49,4 +49,20 @@ class GuestController extends Controller
             'route_name' => $this->route_name,
         ]);
     }
+
+    /**
+     * Display the product detail
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function productDetail(Request $request) {
+        $product_id = $request->id;
+        $product = Product::find($product_id);
+
+        return view('guest.product-detail', [
+            'categories' => $this->categories,
+            'product' => $product,
+            'route_name' => $this->route_name,
+        ]);
+    }
 }

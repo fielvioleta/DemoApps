@@ -9,7 +9,8 @@
 					
 				@endif  --}}
 				<div class="card text-center">
-				    <a href="product.php"><img class="card-img-top" height="300" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
+				    <a href="product.php">
+				    	<img class="card-img-top" height="300" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
 				    <div class="card-body">
 				      <h5 class="card-title">Card title</h5>
 				      <p class="card-text">Category</p>
@@ -28,7 +29,8 @@
 				    </div>
 			  	</div>
 				<div class="card text-center">
-				    <a href="product.php"><img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
+				    <a href="product.php">
+				    	<img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
 				    <div class="card-body">
 				      <h5 class="card-title">Card title Card title Card title</h5>
 				      <p class="card-text">Category</p>
@@ -47,7 +49,8 @@
 				    </div>
 			  	</div>
 				<div class="card text-center">
-				    <a href="product.php"><img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
+				    <a href="product.php">
+				    	<img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
 				    <div class="card-body">
 				      <h5 class="card-title">Card title</h5>
 				      <p class="card-text">Category</p>

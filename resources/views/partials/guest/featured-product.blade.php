@@ -12,7 +12,9 @@
 
 				@foreach( $products as $product )
 					<div class="card text-center">
-						<a href="product.php"><img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap"></a>
+						<a href="{{ route('productDetail', $product->id) }}">
+							<img class="card-img-top" src="/storage/products/{{$product->image_path}}" alt="Card image cap">
+						</a>
 						<div class="card-body">
 							<h5 class="card-title">{{ $product->name }}</h5>
 							<p class="card-text">{{ $product->category->name }}</p>
