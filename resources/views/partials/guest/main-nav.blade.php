@@ -1,4 +1,4 @@
-<nav role="navigation">
+<nav role="navigation" class="top-nav">
 	<ul class="nav justify-content-end">
 	  <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Hello, User!</a>
@@ -8,12 +8,6 @@
 	      <div class="dropdown-divider"></div>
 	      <a class="dropdown-item" href="#">Logout</a>
 	    </div>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="#">My Wishlist</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="shopping.html">My Cart</a>
 	  </li>
 	  <li class="nav-item dropdown">
 	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">EN</a>
@@ -30,16 +24,19 @@
 	    </div>
 	  </li>
 	  <li class="nav-item">
-		<button type="button" class="btn btn-light">Checkout</button>
+	    <a class="nav-link" href="#"><i class="fa fa-heart"></i> <span>3</span></a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="shopping.php"><i class="fa fa-shopping-cart"></i> <span>5</span></a>
 	  </li>
 	</ul>
 </nav>
-<nav class="navbar navbar-expand-lg" role="navigation">
+<nav class="main-nav navbar navbar-expand-lg" role="navigation">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="{{route('index')}}">
-  	<img src="{{ asset('main/ERNI_logo_color-03.png') }}" alt="ERNI Logo">
+  <a class="navbar-brand" href="index.php">
+  	<img src="{{ asset('main/images/ERNI_logo_color-03.png') }}" alt="ERNI Logo">
   </a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -48,15 +45,21 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">Contact Us</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		<div class="input-group">
+		  <input type="text" class="form-control" id="search-keywords" aria-describedby="searchbtn" placeholder="Search the Site">
+		  <div class="input-group-append">
+		    <button class="btn btn-outline-secondary" type="button" id="searchbtn">
+				<i class="fa fa-search"></i>
+		    </button>
+		  </div>
+		</div>
     </form>
   </div>
 </nav>

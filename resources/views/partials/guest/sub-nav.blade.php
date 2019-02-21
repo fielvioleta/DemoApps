@@ -1,5 +1,5 @@
-<div id="category-nav" class="bg-light sticky-top">
-	<nav role="navigation">
+<div id="category-nav" class="sticky-top">
+	<nav role="navigation" class="container">
 		<ul class="nav nav-pills nav-fill">
 		  @foreach($categories as $category)
 			  <li class="nav-item">

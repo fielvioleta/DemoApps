@@ -6,18 +6,18 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ asset('main/analysis-business-coffee-1549702.jpg') }}" alt="First slide">
+      <img class="d-block w-100" src="{{ asset('main/images/analysis-business-coffee-1549702.jpg') }}" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('main/black-friday-fashion-friends-1345082.jpg') }}" alt="Second slide">
-	  <div class="carousel-caption d-none d-md-block">
-	    <h3>Blackfriday Sale</h3>
-	    <p>some text here</p>
-	    <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
-	  </div>
+      <img class="d-block w-100" src="{{ asset('main/images/black-friday-fashion-friends-1345082.jpg') }}" alt="Second slide">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>Blackfriday Sale</h3>
+      <p>some text here</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Shop Now</a>
+    </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('main/apartment-browsing-business-1266007.jpg') }}" alt="Third slide">
+      <img class="d-block w-100" src="{{ asset('main/images/apartment-browsing-business-1266007.jpg') }}" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
