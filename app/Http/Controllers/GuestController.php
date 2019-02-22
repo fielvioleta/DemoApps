@@ -37,7 +37,7 @@ class GuestController extends Controller
 
     /**
      * Display the categories
-     *
+     * @param  category_id int
      * @return \Illuminate\Http\Response
      */
     public function categories(Request $request) {
@@ -52,7 +52,7 @@ class GuestController extends Controller
 
     /**
      * Display the product detail
-     *
+     * @param  $product_id int
      * @return \Illuminate\Http\Response
      */
     public function productDetail(Request $request) {
@@ -62,6 +62,18 @@ class GuestController extends Controller
         return view('guest.product-detail', [
             'categories' => $this->categories,
             'product' => $product,
+            'route_name' => $this->route_name,
+        ]);
+    }
+    
+    /**
+     * Display cart details
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cart() {
+        return view('guest.cart', [
+            'categories' => $this->categories,
             'route_name' => $this->route_name,
         ]);
     }

@@ -6,7 +6,8 @@
     <script>
     	$(document).ready(function(){
     		$( '.btn-add-cart' ).click(function(){
-    			addToCart(JSON.parse($(this).attr('productValue')));
+                console.log($(this).attr('productValue'));
+    			// addToCart(JSON.parse($(this).attr('productValue')));
     		});
 
     		function addToCart(productDetail) {

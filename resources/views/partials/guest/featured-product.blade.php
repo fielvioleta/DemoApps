@@ -29,7 +29,7 @@
 						</div>
 						<div class="card-footer">
 						<button type="button" class="btn"><i class="fa-heart fa"></i></button>
-						<button type="button" class="btn btn-primary"><i class="fa-shopping-cart fa"></i></button>
+						<button type="button" class="btn btn-primary btn-add-cart" productValue="{{ $product }}"><i class="fa-shopping-cart fa"></i></button>
 						</div>
 					</div>
 				@endforeach
@@ -50,7 +50,7 @@
 						</div>
 						<div class="card-footer">
 							<button type="button" class="btn"><i class="fa-heart fa"></i></button>
-							<button type="button" class="btn btn-primary"><i class="fa-shopping-cart fa"></i></button>
+							<button type="button" class="btn btn-primary btn-add-cart" productValue="{{ $product }}"><i class="fa-shopping-cart fa"></i></button>
 						</div>
 					</div>
 				@endforeach
