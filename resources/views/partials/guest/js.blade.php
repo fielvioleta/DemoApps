@@ -6,12 +6,31 @@
     <script>
     	$(document).ready(function(){
     		$( '.btn-add-cart' ).click(function(){
-                console.log($(this).attr('productValue'));
+                addToCart(JSON.parse($(this).attr('productValue')));
     			// addToCart(JSON.parse($(this).attr('productValue')));
     		});
 
     		function addToCart(productDetail) {
-    			console.log(sessionStorage.getItem('cart'));
+    			var cartData = sessionStorage.getItem('cart');
+                var data = [];
+                
+                if (!cartData) {
+
+                    data.push(
+                        {
+                            "product_id": productDetail.id,
+                            "name": productDetail.name,
+                            "image": '/storage/categories/' + productDetail.image_path,
+                            "price": productDetail.price,
+                            "quantity": 1
+                        }
+                    )
+                    
+                    sessionStorage.setItem('cart', JSON.stringify(data));
+                    
+                } else {
+
+                }
 
     		}
     	});
