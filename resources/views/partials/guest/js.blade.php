@@ -5,30 +5,85 @@
 
     <script>
     	$(document).ready(function(){
-    		$( '.btn-add-cart' ).click(function(){
-                addToCart(JSON.parse($(this).attr('productValue')));
-    			// addToCart(JSON.parse($(this).attr('productValue')));
-    		});
+			var cartData = sessionStorage.getItem('cart') ? JSON.parse(sessionStorage.getItem('cart')) : [];
+            $('#cart-count').text( cartData != null ? cartData.length : 0 );
 
-    		function addToCart(productDetail) {
-    			var cartData = sessionStorage.getItem('cart');
-                var data = [];
+            if ( '{{$route_name}}' == 'cart' ) {
                 
-                if (!cartData) {
+                $.each(cartData, function (index, value){
+                    
+                    $("#cart-table tbody").append(`
+                        <tr>
+                            <td>
+                                <a href="/product/`+value.product_id+`"><img src="`+value.image+`" alt="placeholder+image"></a>
+                            </td>
+                            <td>
+                                <h4>`+value.name+`</h4>
+                                <a href="#"><h6>Supplier</a></h6>
+                                <strong>P `+value.price+`</strong>
+                            </td>
+                            <td>
+                                <input type='number' value='`+value.quantity+`' min='1'/>
+                            </td>
+                            <td><strong>P `+(value.price * value.quantity)+`</strong></td>
+                            <td>
+                                <button class="btn btn-light"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    `);
 
-                    data.push(
+                });
+
+            }
+
+            $( '.btn-add-cart' ).click(function(){
+                addToCart(JSON.parse($(this).attr('productValue')));
+            });
+
+            function addToCart(productDetail) {
+                                    
+                if (cartData.length == 0) {
+
+                    cartData.push(
                         {
                             "product_id": productDetail.id,
                             "name": productDetail.name,
-                            "image": '/storage/categories/' + productDetail.image_path,
+                            "image": '/storage/products/' + productDetail.image_path,
                             "price": productDetail.price,
                             "quantity": 1
                         }
                     )
                     
-                    sessionStorage.setItem('cart', JSON.stringify(data));
-                    
+                    sessionStorage.setItem('cart', JSON.stringify(cartData));
+
                 } else {
+                    
+                    var checkProduct = false;
+                    var checkIndex;
+                    $.map(cartData, function( value, index ) {
+                        if( value.product_id == productDetail.id ) {
+                            checkProduct = true;
+                            checkIndex = index;
+                        }
+                    });
+
+                    if ( checkProduct == true) {
+                        cartData[checkIndex].quantity++;
+                    } else {
+
+                        cartData.push(
+                            {
+                                "product_id": productDetail.id,
+                                "name": productDetail.name,
+                                "image": '/storage/products/' + productDetail.image_path,
+                                "price": productDetail.price,
+                                "quantity": 1
+                            }
+                        );
+
+                    }
+                    
+                    sessionStorage.setItem('cart', JSON.stringify(cartData));
 
                 }
 

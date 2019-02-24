@@ -8,7 +8,7 @@
 		</div>
 
 		<div class="contents">
-			<table class="table-striped w-100">
+			<table class="table-striped w-100" id="cart-table">
 				<thead>
 					<tr>
 						<th></th>
@@ -19,121 +19,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>
-							<a href="product.php"><img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
-						</td>
-						<td>
-							<h4>Product Name</h4>
-							<a href="#"><h6>Supplier</a></h6>
-							<strong>P 100.00</strong>
-						</td>
-						<td>
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option selected="selected">3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</td>
-						<td><strong>P 300.00</strong></td>
-						<td>
-							<button class="btn btn-light"><i class="fa fa-trash"></i></button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="product.php"><img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
-						</td>
-						<td>
-							<h4>Product Name</h4>
-							<a href="#"><h6>Supplier</a></h6>
-							<strong>P 100.00</strong>
-						</td>
-						<td>
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option selected="selected">3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</td>
-						<td><strong>P 300.00</strong></td>
-						<td>
-							<button class="btn btn-light"><i class="fa fa-trash"></i></button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="product.php"><img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
-						</td>
-						<td>
-							<h4>Product Name</h4>
-							<a href="#"><h6>Supplier</a></h6>
-							<strong>P 100.00</strong>
-						</td>
-						<td>
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option selected="selected">3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</td>
-						<td><strong>P 300.00</strong></td>
-						<td>
-							<button class="btn btn-light"><i class="fa fa-trash"></i></button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="product.php"><img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
-						</td>
-						<td>
-							<h4>Product Name</h4>
-							<a href="#"><h6>Supplier</a></h6>
-							<strong>P 100.00</strong>
-						</td>
-						<td>
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option selected="selected">3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</td>
-						<td><strong>P 300.00</strong></td>
-						<td>
-							<button class="btn btn-light"><i class="fa fa-trash"></i></button>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="product.php"><img src="http://dummyimage.com/100x100/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image"></a>
-						</td>
-						<td>
-							<h4>Product Name</h4>
-							<a href="#"><h6>Supplier</a></h6>
-							<strong>P 100.00</strong>
-						</td>
-						<td>
-							<select class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option selected="selected">3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</td>
-						<td><strong>P 300.00</strong></td>
-						<td>
-							<button class="btn btn-light"><i class="fa fa-trash"></i></button>
-						</td>
-					</tr>
+					
+
+					
 				</tbody>
 			</table>
 

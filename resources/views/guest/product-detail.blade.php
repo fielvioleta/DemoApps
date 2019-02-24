@@ -34,7 +34,7 @@
 							</div>
 						</div>
 
-						<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+						<button type="button" class="btn btn-primary btn-add-cart" productValue="{{ $product }}"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 						<button type="button" class="btn btn-secondary"><i class="fa fa-heart"></i> Wishlist</button>
 					</div>
 				</div>
