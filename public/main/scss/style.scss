@@ -1,0 +1,95 @@
+$links: #073779;
+
+
+body{font-size: 14px; font-family: Open Sans;}
+a, a:hover{color:$links; font-weight: 500;}
+h2{font-family: Times New Roman; font-style: italic; color:$links;}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus{
+	background:$links; border-color:$links;
+}
+
+.blockquote{font-size: 0.9em;}
+.blockquote-footer{color:$links;}
+
+.tab-content>.tab-pane{padding:1em 0;}
+
+.top-nav{
+	font-size: 0.8em;
+}
+
+.main-nav{
+	a{font-weight: 600;}
+}
+
+#category-nav{background:rgba(0,0,0,0.5);
+	a{color:#fff;}
+}
+
+.checked {
+  color: orange;
+}
+img{max-width: 100%;}
+
+#category-nav{top:110px; padding:0.5em;}
+
+.spacer{margin:3rem 0;}
+
+.sidebar{
+	.btn-link{color:$links; text-decoration: none; font-family:Open Sans;}
+	.card-header{padding:0.5em 1em;}
+	a:hover{text-decoration: underline;}
+}
+
+.masonry{display: inline-block; column-count: 3; -webkit-column-count: 3; column-gap: 0; -webkit-column-gap: 0; width:100%; margin:0 auto;
+  	> div{break-inside: avoid; -webkit-column-break-inside: avoid; padding: 5px; margin-bottom: 1em !important;}
+  	img{max-width: unset;}
+}
+
+table{
+	th{text-align: inherit; background: $links; color: #fff; padding: 1.2em;}
+	td{padding:0.5em;}
+	h4{font-family: Times New Roman; font-style: italic;}
+}
+
+input[type=checkbox], input[type=radio]{height: 1.5em; width: 1.5em;}
+
+#checkoutTab{
+	.nav-item a{font-weight: bold;}
+}
+#checkoutContent{
+	em{font-size: 0.9em;}
+	li{align-items: center;}
+}
+#cartSummary{border:1px solid #eee; border-radius: 5px; padding:2em;
+	h5{font-family: Times New Roman; font-style:italic; color: $links;}
+	em{font-size: 0.9em;}
+}
+
+#featureProducts{
+	img{height:200px; width:100%; object-fit: cover;}
+}
+
+.carousel-control-next{width:5%; right:-4em;}
+.carousel-control-prev{width:5%; left:-4em;}
+.carousel-control-prev-icon{background: none; 
+	&:after{content: "\f053"; font-family: FontAwesome; color: $links; font-size: 2em;}
+}
+.carousel-control-next-icon{background: none; 
+	&:after{content: "\f054"; font-family: FontAwesome; color: $links; font-size: 2em;}
+}
+
+#footer{background:#505455; color:#fff; font-size: 0.9em; padding:3em;
+	a,a:hover{color:#fff;}
+	.copy{color: #a7aeb5; margin-top: 2em;}
+}
+
+.alert{position: fixed; top: 0; z-index: -1; border-radius: 0; font-size: 1em; width: 100%; box-shadow: 0 -3px 10px 4px #888; font-size:1.2em;
+	p{margin:0;}
+	&.show{z-index: 1050;}
+}
+
+@media all and (max-width:768px){
+	.top-nav ul{justify-content: center !important;}
+	.masonry{column-count: 1; -webkit-column-count: 1;}
+}
