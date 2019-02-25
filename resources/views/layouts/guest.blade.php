@@ -18,8 +18,8 @@
 	</div>
 
 
-	<div class="alert alert-warning alert-dismissible fade" role="alert">
-	  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	<div class="alert alert-warning alert-dismissible fade" role="alert" id="cart-wishlist-flash-message">
+	  <span class="text-wrapper">test</span>
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	    <span aria-hidden="true">&times;</span>
 	  </button>

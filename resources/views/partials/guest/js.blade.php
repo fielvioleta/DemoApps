@@ -87,6 +87,9 @@
 
                 }
 
+                $('#cart-wishlist-flash-message .text-wrapper').text( productDetail.name + ' has been added to your cart.' );
+                $('#cart-wishlist-flash-message').toggleClass('show');
+
     		}
     	});
     </script>
