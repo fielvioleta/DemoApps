@@ -16,6 +16,7 @@ Route::get('/categories/{id?}', 'GuestController@categories')->name('categories'
 Route::get('/product/{id}', 'GuestController@productDetail')->name('productDetail');
 Route::get('/cart', 'GuestController@cart')->name('cart');
 Route::get('/wishlist', 'GuestController@wishlist')->name('wishlist');
+Route::get('/checkout', 'GuestController@checkout')->name('checkout');
 
 // admin routes
 Route::prefix('admin')->group(function () {

@@ -17,15 +17,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					
 
-					
 				</tbody>
 			</table>
 
-			<div class="spacer text-center">
-				<a class="btn btn-primary btn-lg" href="checkout.php" role="button">Proceed to Checkout</a>
-			</div>
 		</div>
 	</div>
 </div>

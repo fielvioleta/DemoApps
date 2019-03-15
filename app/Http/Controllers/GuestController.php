@@ -83,9 +83,20 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function wishlist () {
+    public function wishlist() {
         return view('guest.wishlist', [
+            'categories' => $this->categories,
+            'route_name' => $this->route_name,
+        ]);
+    }
+
+    /**
+     * Display checkout details
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function checkout() {
+        return view('guest.checkout', [
             'categories' => $this->categories,
             'route_name' => $this->route_name,
         ]);

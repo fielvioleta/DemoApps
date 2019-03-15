@@ -51,7 +51,7 @@
                                 <a href="#"><h6>Supplier</a></h6>
                             </td>
                             <td>
-                                <button class="btn btn-light cart-item-delete"><i class="fa fa-trash"></i></button>
+                                <button class="btn btn-light wishlist-item-delete"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                     `);
@@ -75,6 +75,22 @@
                 cartData.splice(index,1);
                 updateCount( 'cart' );
                 updateSession( 'cart' );
+
+            });
+
+            $( '.wishlist-item-delete' ).click(function(){
+                
+                var index = $(this).parent().parent().index();
+                $(this).parent().parent().remove();
+                cartData.splice(index,1);
+                updateCount( 'cart' );
+                updateSession( 'cart' );
+
+                var index = $(this).parent().parent().index();
+                $(this).parent().parent().remove();
+                wishlistData.splice(index,1);
+                updateCount( 'wishlist' );
+                updateSession( 'wishlist' );
 
             });
 
