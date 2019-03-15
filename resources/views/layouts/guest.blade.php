@@ -18,7 +18,7 @@
 	</div>
 
 
-	<div class="alert alert-warning alert-dismissible fade" role="alert" id="cart-wishlist-flash-message">
+	<div class="alert alert-success alert-dismissible fade" role="alert" id="cart-wishlist-flash-message">
 	  <span class="text-wrapper">test</span>
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	    <span aria-hidden="true">&times;</span>

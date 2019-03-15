@@ -77,4 +77,17 @@ class GuestController extends Controller
             'route_name' => $this->route_name,
         ]);
     }
+
+    /**
+     * Display wishlist details
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function wishlist () {
+        return view('guest.wishlist', [
+            'categories' => $this->categories,
+            'route_name' => $this->route_name,
+        ]);
+    }
 }

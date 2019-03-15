@@ -24,7 +24,7 @@
 	    </div>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="#"><i class="fa fa-heart"></i> <span>3</span></a>
+	    <a class="nav-link" href="{{ route('wishlist') }}"><i class="fa fa-heart"></i> <span id="wishlist-count"></span></a>
 	  </li>
 	  <li class="nav-item">
 		<a class="nav-link" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i> <span id="cart-count"></span></a>
